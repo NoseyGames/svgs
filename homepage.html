@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willowbrook School District | Inspiring Tomorrow's Leaders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Lora', serif;
+            }
+        }
+        @layer utilities {
+            .text-gradient {
+                background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .blob {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+            .blob-2 {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+            .paper-texture {
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f59e0b' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f59e0b',
+                        secondary: '#ea580c',
+                        accent: '#10b981',
+                        dark: '#1e293b',
+                        light: '#fffbeb',
+                        warm: '#fef3c7'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<base target="_blank">
+</head>
+<body class="bg-warm text-dark overflow-x-hidden">
+
+    <div class="bg-dark text-white py-2 px-4 text-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1">
+                    <i data-lucide="" class="w-4 h-4 text-primary"></i>
+                    welcome to nikehub, click any link for unblocked access
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/page.html" class="hover:text-primary transition-colors">Staff Portal</a>
+                <a href="/page.html" class="hover:text-primary transition-colors">Student Portal</a>
+                <a href="/page.html" class="hover:text-primary transition-colors">Parents</a>
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg transform hover:rotate-12 transition-transform">
+                        <i data-lucide="graduation-cap" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold font-serif text-dark">Willowbrook</span>
+                        <span class="block text-xs text-gray-500 font-semibold tracking-wider">SCHOOL DISTRICT</span>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="/page.html" class="text-dark hover:text-primary font-bold transition-colors">Home</a>
+                    <a href="/page.html" class="text-gray-600 hover:text-primary font-semibold transition-colors">About Us</a>
+                    <a href="/page.html" class="text-gray-600 hover:text-primary font-semibold transition-colors">Our Schools</a>
+                    <a href="/page.html" class="text-gray-600 hover:text-primary font-semibold transition-colors">Programs</a>
+                    <a href="/page.html" class="text-gray-600 hover:text-primary font-semibold transition-colors">Calendar</a>
+                    <a href="/page.html" class="px-6 py-2.5 bg-primary text-white rounded-full font-bold hover:bg-secondary transition-all transform hover:scale-105 shadow-md">
+                        Enroll Now
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-dark">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-100">
+                <div class="flex flex-col gap-4 pt-4">
+                    <a href="/page.html" class="text-dark font-bold">Home</a>
+                    <a href="/page.html" class="text-gray-600 font-semibold">About Us</a>
+                    <a href="/page.html" class="text-gray-600 font-semibold">Our Schools</a>
+                    <a href="/page.html" class="text-gray-600 font-semibold">Programs</a>
+                    <a href="/page.html" class="text-gray-600 font-semibold">Calendar</a>
+                    <a href="/page.html" class="text-primary font-bold">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-[90vh] flex items-center paper-texture overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-primary/20 blob animate-float"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 blob-2 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/10 blob animate-float" style="animation-delay: 4s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md text-secondary font-bold text-sm">
+                        <i data-lucide="star" class="w-4 h-4 fill-secondary text-secondary"></i>
+                        #1 Rated District in the Region
+                    </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-dark leading-tight">
+                        Where Every Child <span class="text-gradient">Shines</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
+                        Nurturing curious minds, building character, and preparing students for a bright future through innovative education and caring community support.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="/page.html" class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105 flex items-center gap-2">
+                            Start Your Journey
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="/page.html" class="px-8 py-4 bg-white text-dark border-2 border-primary/30 rounded-full font-bold text-lg hover:bg-primary/5 transition-all flex items-center gap-2">
+                            <i data-lucide="play-circle" class="w-5 h-5 text-primary"></i>
+                            Take a Virtual Tour
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-6 pt-4 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-accent"></i>
+                            <span>Safe Environment</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="users" class="w-5 h-5 text-accent"></i>
+                            <span>Small Class Sizes</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="award" class="w-5 h-5 text-accent"></i>
+                            <span>Excellence Award 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" 
+                             alt="Happy students learning" 
+                             class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/30 to-transparent"></div>
+                    </div>
+
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs transform hover:-translate-y-2 transition-transform">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart" class="w-7 h-7 text-primary fill-primary/20"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-dark">98%</div>
+                                <div class="text-sm text-gray-500">Parent Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg transform rotate-6 hover:rotate-0 transition-transform">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="trophy" class="w-5 h-5 text-yellow-600"></i>
+                            </div>
+                            <div class="text-sm font-bold text-dark">Blue Ribbon<br>School District</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-primary">12</div>
+                    <div class="text-gray-600 font-semibold">Schools</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-secondary">8,500+</div>
+                    <div class="text-gray-600 font-semibold">Students</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-accent">650+</div>
+                    <div class="text-gray-600 font-semibold">Teachers</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-dark">95%</div>
+                    <div class="text-gray-600 font-semibold">Graduation Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 space-y-6">
+                    <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold">
+                        About Our District
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark leading-tight">
+                        Building Bright Futures Since <span class="text-gradient">1952</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        For over 70 years, Willowbrook School District has been a cornerstone of educational excellence. We believe every child deserves a nurturing environment where they can discover their passions and develop their unique talents.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Our dedicated educators, innovative programs, and strong community partnerships create an ecosystem where students don't just learn—they thrive, grow, and prepare for success in an ever-changing world.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3 p-4 bg-warm rounded-xl">
+                            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="book-open" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">STEM Focus</h4>
+                                <p class="text-sm text-gray-600">Robotics, coding & labs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-warm rounded-xl">
+                            <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="palette" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Arts & Music</h4>
+                                <p class="text-sm text-gray-600">Full arts curriculum</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-warm rounded-xl">
+                            <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="globe" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Global Learning</h4>
+                                <p class="text-sm text-gray-600">Language immersion</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-warm rounded-xl">
+                            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="activity" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Athletics</h4>
+                                <p class="text-sm text-gray-600">15 varsity sports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1427504740701-25d7a7a9f29d?w=400&q=80" 
+                             alt="Students in library" 
+                             class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80" 
+                             alt="Science class" 
+                             class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=80" 
+                             alt="Art class" 
+                             class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&q=80" 
+                             alt="Sports team" 
+                             class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    </div>
+
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-full shadow-2xl border-4 border-primary">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary">70+</div>
+                            <div class="text-xs font-bold text-gray-600">Years of<br>Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schools" class="py-24 px-6 bg-warm paper-texture">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 bg-white text-primary rounded-full text-sm font-bold mb-4 shadow-sm">
+                    Our Campuses
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+                    Schools for Every <span class="text-gradient">Stage</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    From early childhood through high school, we provide exceptional educational experiences at every level.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1564429238198-e3de322d0b66?w=600&q=80" 
+                             alt="Elementary school" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            6 Schools
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="sun" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Elementary</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Grades K-5 • Ages 5-11</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Play-based learning
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Reading & math foundations
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Art, music & PE
+                            </li>
+                        </ul>
+                        <a href="/page.html" class="flex items-center justify-center gap-2 w-full py-3 border-2 border-primary text-primary rounded-xl font-bold hover:bg-primary hover:text-white transition-all">
+                            Explore Elementary
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1525921429624-479b6a26d84d?w=600&q=80" 
+                             alt="Middle school students" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">
+                            3 Schools
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="zap" class="w-5 h-5 text-secondary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">Middle School</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Grades 6-8 • Ages 11-14</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Advanced STEM labs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Elective explorations
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Sports & clubs
+                            </li>
+                        </ul>
+                        <a href="/page.html" class="flex items-center justify-center gap-2 w-full py-3 border-2 border-secondary text-secondary rounded-xl font-bold hover:bg-secondary hover:text-white transition-all">
+                            Explore Middle School
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80" 
+                             alt="High school campus" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">
+                            3 Schools
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="rocket" class="w-5 h-5 text-accent"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark">High School</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Grades 9-12 • Ages 14-18</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                AP & IB programs
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                Career pathways
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-accent"></i>
+                                College counseling
+                            </li>
+                        </ul>
+                        <a href="/page.html" class="flex items-center justify-center gap-2 w-full py-3 border-2 border-accent text-accent rounded-xl font-bold hover:bg-accent hover:text-white transition-all">
+                            Explore High School
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-bold mb-4">
+                        Signature Programs
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+                        Learning Beyond the <span class="text-gradient">Classroom</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We offer unique programs that cater to diverse interests and learning styles, ensuring every student finds their path to success.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 rounded-2xl bg-warm hover:bg-primary/5 transition-colors cursor-pointer group">
+                            <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="cpu" class="w-7 h-7 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">STEM Innovation Lab</h4>
+                                <p class="text-gray-600">Robotics, 3D printing, coding, and AI exploration for grades 3-12.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-4 rounded-2xl bg-warm hover:bg-secondary/5 transition-colors cursor-pointer group">
+                            <div class="w-14 h-14 bg-secondary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="languages" class="w-7 h-7 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">Dual Language Immersion</h4>
+                                <p class="text-gray-600">Spanish and Mandarin programs starting from kindergarten.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-4 rounded-2xl bg-warm hover:bg-accent/5 transition-colors cursor-pointer group">
+                            <div class="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="sprout" class="w-7 h-7 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">Outdoor Education</h4>
+                                <p class="text-gray-600">Environmental science, gardening, and nature exploration programs.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 p-4 rounded-2xl bg-warm hover:bg-blue-500/5 transition-colors cursor-pointer group">
+                            <div class="w-14 h-14 bg-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <i data-lucide="music" class="w-7 h-7 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark mb-1">Performing Arts Academy</h4>
+                                <p class="text-gray-600">Theater, orchestra, band, and visual arts with professional mentorship.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" 
+                         alt="Students working on robotics" 
+                         class="relative rounded-3xl shadow-2xl w-full h-[600px] object-cover">
+
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-2xl p-6 shadow-xl">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">45+</div>
+                                <div class="text-xs text-gray-600">After-school clubs</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">12</div>
+                                <div class="text-xs text-gray-600">Sports teams</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-accent">8</div>
+                                <div class="text-xs text-gray-600">AP courses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calendar" class="py-24 px-6 bg-warm paper-texture">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-white text-primary rounded-full text-sm font-bold mb-4 shadow-sm">
+                        School Calendar
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark">
+                        Upcoming <span class="text-gradient">Events</span>
+                    </h2>
+                </div>
+                <a href="/page.html" class="px-6 py-3 bg-dark text-white rounded-full font-bold hover:bg-dark/90 transition-all flex items-center gap-2">
+                    Full Calendar
+                    <i data-lucide="calendar-days" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-primary">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-primary/10 text-primary px-3 py-1 rounded-lg font-bold text-sm">
+                            APR 15
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">6:00 PM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Spring Open House</h3>
+                    <p class="text-gray-600 text-sm mb-4">Tour our campuses, meet teachers, and learn about enrollment for the 2026-27 school year.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        All Campuses
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-secondary">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-secondary/10 text-secondary px-3 py-1 rounded-lg font-bold text-sm">
+                            APR 22
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">All Day</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Earth Day Celebration</h3>
+                    <p class="text-gray-600 text-sm mb-4">Student-led sustainability projects, tree planting, and environmental science fairs.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        District-wide
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-accent">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-accent/10 text-accent px-3 py-1 rounded-lg font-bold text-sm">
+                            MAY 03
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">7:00 PM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Spring Concert</h3>
+                    <p class="text-gray-600 text-sm mb-4">Orchestra, band, and choir performances featuring students from all grade levels.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        Performing Arts Center
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-blue-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-lg font-bold text-sm">
+                            MAY 12
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">5:30 PM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Board of Education Meeting</h3>
+                    <p class="text-gray-600 text-sm mb-4">Monthly public meeting. Community members welcome to attend and share feedback.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        District Office
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-purple-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-purple-100 text-purple-600 px-3 py-1 rounded-lg font-bold text-sm">
+                            MAY 20
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">9:00 AM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">College & Career Fair</h3>
+                    <p class="text-gray-600 text-sm mb-4">High school students meet with college reps and local employers. Resume workshops included.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        High School Gym
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-pink-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-pink-100 text-pink-600 px-3 py-1 rounded-lg font-bold text-sm">
+                            JUN 05
+                        </div>
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">6:00 PM</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Graduation Ceremony</h3>
+                    <p class="text-gray-600 text-sm mb-4">Celebrating the Class of 2026! Family and friends welcome to honor our graduates.</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        Stadium
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold mb-4">
+                    Community Voices
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark">
+                    What Families <span class="text-gradient">Say</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-warm rounded-3xl p-8 relative">
+                    <div class="absolute -top-4 left-8 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <i data-lucide="quote" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"The teachers at Willowbrook truly care about each student. My daughter has flourished both academically and socially. We couldn't ask for a better community."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Parent" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Sarah Mitchell</div>
+                            <div class="text-sm text-gray-500">Parent of 3rd & 7th graders</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-warm rounded-3xl p-8 relative">
+                    <div class="absolute -top-4 left-8 w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
+                        <i data-lucide="quote" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"The STEM program gave my son opportunities I never had. He's now passionate about engineering and has already won regional robotics competitions!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Parent" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">James Rodriguez</div>
+                            <div class="text-sm text-gray-500">Parent of 10th grader</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-warm rounded-3xl p-8 relative">
+                    <div class="absolute -top-4 left-8 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                        <i data-lucide="quote" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"As a teacher here for 15 years, I can say Willowbrook invests in its educators. The professional development and resources help us bring our best to the classroom every day."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Teacher" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Emily Chen</div>
+                            <div class="text-sm text-gray-500">5th Grade Teacher</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="py-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
+        <div class="absolute inset-0 paper-texture opacity-30"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-6">
+                <i data-lucide="sparkles" class="w-12 h-12 text-white/80 animate-pulse"></i>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Join the Willowbrook Family
+            </h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                Enrollment for the 2026-2027 school year is now open. Discover why over 8,500 families choose Willowbrook for their children's education.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/page.html" class="px-8 py-4 bg-white text-secondary rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    Start Enrollment
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="/page.html" class="px-8 py-4 bg-white/20 text-white border-2 border-white rounded-full font-bold text-lg hover:bg-white/30 transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    Download Guide
+                </a>
+            </div>
+            <p class="mt-6 text-white/70 text-sm">
+                Questions? Call our Enrollment Center at <span class="font-bold text-white">(555) 123-ENROLL</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-bold mb-4">
+                        Contact Us
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+                        We're Here to <span class="text-gradient">Help</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Whether you have questions about enrollment, programs, or district policies, our team is ready to assist you.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-warm">
+                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark text-lg">District Office</h4>
+                                <p class="text-gray-600">123 Education Lane<br>Willowbrook, WB 90210</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-warm">
+                            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark text-lg">Phone</h4>
+                                <p class="text-gray-600">Main: (555) 123-4567<br>Enrollment: (555) 123-ENROLL</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-warm">
+                            <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark text-lg">Email</h4>
+                                <p class="text-gray-600">info@willowbrook.edu<br>enrollment@willowbrook.edu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold text-dark mb-4">Office Hours</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <span class="font-semibold">Monday - Friday</span><br>
+                                <span class="text-gray-600">7:30 AM - 4:30 PM</span>
+                            </div>
+                            <div class="bg-gray-50 p-3 rounded-lg">
+                                <span class="font-semibold">Saturday</span><br>
+                                <span class="text-gray-600">9:00 AM - 12:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-warm rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Send a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all bg-white" placeholder="Jane">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all bg-white" placeholder="Smith">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all bg-white" placeholder="jane@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">I am a... *</label>
+                            <select required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all bg-white">
+                                <option value="">Select...</option>
+                                <option>Prospective Parent</option>
+                                <option>Current Parent</option>
+                                <option>Student</option>
+                                <option>Community Member</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Topic *</label>
+                            <select required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all bg-white">
+                                <option value="">Select topic...</option>
+                                <option>Enrollment & Registration</option>
+                                <option>School Programs</option>
+                                <option>Transportation</option>
+                                <option>Special Services</option>
+                                <option>General Question</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Message *</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-primary focus:ring-0 outline-none transition-all resize-none bg-white" placeholder="How can we help you today?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-bold hover:shadow-lg transform hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                            Send Message
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold font-serif">Willowbrook</span>
+                            <span class="block text-xs text-gray-400">SCHOOL DISTRICT</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Inspiring tomorrow's leaders through excellence in education since 1952.</p>
+                    <div class="flex gap-3">
+                        <a href="/page.html" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="/page.html" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="/page.html" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="/page.html" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/page.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Our Schools</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Enrollment</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Calendar</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Employment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-secondary">Departments</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Teaching & Learning</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Student Services</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Technology</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Transportation</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Food Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-accent">Resources</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Parent Portal</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Student Portal</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Lunch Menu</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Bus Routes</a></li>
+                        <li><a href="/page.html" class="hover:text-white transition-colors">Handbook & Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>© 2026 Willowbrook School District. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="/page.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="/page.html" class="hover:text-white transition-colors">Non-Discrimination</a>
+                    <a href="/page.html" class="hover:text-white transition-colors">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = '/page.html';
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group, .bg-white').forEach((el, index) => {
+            if (!el.closest('nav') && !el.closest('footer')) {
+                el.style.opacity = '0';
+                observer.observe(el);
+            }
+        });
+        
+        document.addEventListener('contextmenu', e => e.preventDefault(), false);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        }, false);
+    </script>
+    
+</body>
+</html>
